@@ -1,0 +1,109 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+nav {
+    background: #555;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.project {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+#dark-mode-toggle {
+    display: none;
+}
+
+.dark-mode-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.dark-mode-label:hover {
+    background: #555;
+}
+
+
+
+#dark-mode-toggle:checked ~ .content {
+    background-color: #222;
+    color: #eee;
+}
+
+
+#dark-mode-toggle:checked ~ .content header,
+#dark-mode-toggle:checked ~ .content nav,
+#dark-mode-toggle:checked ~ .content footer {
+    background: #111;
+}
+
+#dark-mode-toggle:checked ~ .content .project {
+    background: #333;
+}
+
+
+#dark-mode-toggle:checked ~ .content nav a {
+    color: #eee;
+}
